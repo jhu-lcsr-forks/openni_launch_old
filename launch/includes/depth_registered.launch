@@ -13,6 +13,9 @@
   <arg name="rgb"              default="rgb" />
   <arg name="depth"            default="depth" />
   <arg name="depth_registered" default="depth_registered" />
+  <!-- For filtering depth images, set depth_registered_filtered to the
+       filtered depth image topic -->
+  <arg name="depth_registered_filtered" default="$(arg depth_registered)" />
   <!-- For distinguishing multiple register/XYZRGB nodelets. Default fails if rgb
        or depth contains a namespace. -->
   <arg name="suffix" default="$(arg depth)_$(arg rgb)" />

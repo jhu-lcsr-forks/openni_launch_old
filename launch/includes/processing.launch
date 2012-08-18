@@ -43,6 +43,7 @@
     <arg name="rgb" value="$(arg rgb)" />
     <arg name="depth" value="$(arg depth)" />
     <arg name="depth_registered" value="$(arg depth_registered)" />
+    <arg name="depth_registered_filtered" value="$(arg depth_registered_filtered)" />
     <arg name="respawn" value="$(arg respawn)" />
   </include>
 
