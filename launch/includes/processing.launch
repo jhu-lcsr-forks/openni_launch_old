@@ -14,6 +14,7 @@
   <arg name="ir"               default="ir" />
   <arg name="depth"            default="depth" />
   <arg name="depth_registered" default="depth_registered" />
+  <arg name="depth_registered_filtered" default="$(arg depth_registered_filtered)" />
   <arg name="projector"        default="projector" />
 
   <!-- RGB processing -->
