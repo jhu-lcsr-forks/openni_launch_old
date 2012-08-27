@@ -6,12 +6,12 @@
   <arg name="camera" default="camera" />
 
   <arg name="pi/2" value="1.5707963267948966" />
-  <arg name="optical_rotate" value="-xyz 0 0 0 -ypr -$(arg pi/2) 0 -$(arg pi/2)" />
+  <arg name="optical_rotate" value="--xyz 0 0 0 --ypr -$(arg pi/2) 0 -$(arg pi/2)" />
 
   <node pkg="lcsr_tf_tools" type="set_multi_static.py" name="$(arg camera)_base_link"
-        args="-xyz 0 -0.02  0  -ypr 0 0 0  /$(arg camera)_link /$(arg camera)_depth_frame 100" />  
+        args="--xyz 0 -0.02  0  --ypr 0 0 0  /$(arg camera)_link /$(arg camera)_depth_frame 100" />  
   <node pkg="lcsr_tf_tools" type="set_multi_static.py" name="$(arg camera)_base_link1"
-        args="-xyz 0 -0.045 0  -ypr 0 0 0  /$(arg camera)_link /$(arg camera)_rgb_frame 100" />  
+        args="--xyz 0 -0.045 0  --ypr 0 0 0  /$(arg camera)_link /$(arg camera)_rgb_frame 100" />  
   <node pkg="lcsr_tf_tools" type="set_multi_static.py" name="$(arg camera)_base_link2"
         args="$(arg optical_rotate) /$(arg camera)_depth_frame /$(arg camera)_depth_optical_frame  100" />  
   <node pkg="lcsr_tf_tools" type="set_multi_static.py" name="$(arg camera)_base_link3"
